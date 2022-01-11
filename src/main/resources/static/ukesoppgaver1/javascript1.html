@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 1</title>
+    <script type="text/javascript">
+        function heiVerdenKnapp() {
+            let ut = "Hei verden";
+            document.write(ut);
+        }
+
+        function heiVerdenAlert() {
+            let ut = "Hei verden";
+            alert(ut);
+        }
+
+        function skrivTilSkjerm(innTekst) {
+            //   let ut = document.getElementById(innTekst);
+            document.write(innTekst);
+            // document.write(ut);
+        }
+
+        function alertTilSkjerm(innTekst) {
+            //   let ut = document.getElementById(innTekst);
+            alert(innTekst);
+            // document.write(ut);
+        }
+
+        function alertTilSkjermMedConsoleLog(innTekst) {
+            //   let ut = document.getElementById(innTekst);
+            alert(innTekst);
+            // document.write(ut);
+            console.log(innTekst);
+        }
+
+        function skrivTilSkjermMedFarge(innTekst) {
+            //   let ut = document.getElementById(innTekst);
+            document.write(innTekst.fontcolor("red"));
+
+            // document.write(ut);
+        }
+
+        function alertTilSkjermStorebokstaver(innTekst) {
+            //   let ut = document.getElementById(innTekst);
+            alert(innTekst.toUpperCase());
+            // document.write(ut);
+        }
+
+        function skriveTallEn() {
+            console.log(1);
+        }
+
+        let count = 0;
+
+        function skriveTallEnOgTell() {
+            console.log(1);
+            count++;
+            console.log(count);
+        }
+
+        function skriveTallEnOgTellMelding() {
+            console.log(1);
+            count++;
+            console.log("Du har trykket på kanppen " + count + " ganger!");
+        }
+
+
+
+    </script>
+</head>
+<body>
+<h1>Oppgave 1</h1>
+<p>
+    <input type="button" value="Hei Verden!" onclick="heiVerdenKnapp()">
+</p>
+
+<h1>Oppgave 2</h1>
+<p>
+    <input type="button" value="Hei Verden!" onclick="heiVerdenAlert()">
+</p>
+
+<h1>Oppgave 3</h1>
+<p>
+    <input type="text" id="innTekst" onchange="skrivTilSkjerm(this.value)">
+</p>
+
+<h1>Oppgave 4</h1>
+<p>
+    <input type="text" onchange="alertTilSkjerm(this.value)">
+</p>
+
+<h1>Oppgave 5</h1>
+<p>
+    <input type="text" onchange="alertTilSkjermMedConsoleLog(this.value)">
+</p>
+
+<h1>Oppgave 6</h1>
+<p>
+
+    <input type="text" onchange="skrivTilSkjermMedFarge(this.value)">
+
+</p>
+
+<h1>Oppgave 7</h1>
+<p>
+    <input type="text" onchange="alertTilSkjermStorebokstaver(this.value)">
+</p>
+
+<h1>Oppgave 8</h1>
+<p>
+    <input type="button" value="Trykk for å logge 1!" onclick="skriveTallEn()">
+</p>
+
+<h1>Oppgave 9</h1>
+<p>
+    <input type="button" value="Trykk for å logge 1! Å telle antal ganger!" onclick="skriveTallEnOgTell()">
+</p>
+
+<h1>Oppgave 10</h1>
+<p>
+    <input type="button" value="Trykk for å logge 1! Å telle antal ganger!" onclick="skriveTallEnOgTellMelding()">
+</p>
+
+</body>
+</html>
