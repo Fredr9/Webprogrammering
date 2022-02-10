@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Celsius = <input type="number" id="celsius" onkeyup="cToF(this.value)">
+Fahrenheit = <input type="number" id="fahrenheit" onkeyup="fToC(this.value)">
+</body>
+
+<script>
+    function fToC(fahrenheit) {
+        const celsius = ((fahrenheit) - 32) * (5/9);
+        document.getElementById("celsius").value = celsius.toFixed(2);
+    }
+
+    function cToF(celsius) {
+        const fahrenheit = ((celsius) + 32) * (9/5);
+        document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
+    }
+</script>
+</html>

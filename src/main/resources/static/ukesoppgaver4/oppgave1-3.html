@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Ukesoppgaver</title>
+    <meta charset="utf-8"/>
+    <script src="https.//cide.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //Oppgave 1
+        function printInfo(){
+            let navn = document.getElementById("navn").value;
+            let alder = document.getElementById("alder").value;
+            let output = document.getElementById("output");
+            let alderTest = Number(alder);
+            if (isNaN(alderTest) || alderTest < 1) {
+                alert("Du må skrive inn et tall større enn 0!");
+            } else {
+                output.innerHTML = "Hei, " + navn + ". Du er " + alder + " år gammel.";
+            }
+        }
+
+        //Oppgave 2
+        function fahrenheitToCelsius(f) {
+            let c = (5/9)*( parseFloat(f) - 32);
+            let el = document.getElementById("celsius");
+            el.value = c;
+        }
+        function celsiusToFahrenheit(c) {
+            let f = (9/5) * parseFloat(c) + 32;
+            let el = document.getElementById("fahrenheit");
+            el.value = f;
+        }
+
+        //Oppgave 3
+        function pluss() {
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+            if(isNaN(in_1) || isNaN(in_2)) {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 + in_2).toString();
+            }
+        }
+
+        function minus() {
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+            if(isNaN(in_1) || isNaN(in_2)) {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 - in_2).toString();
+            }
+        }
+
+        function gange() {
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+            if(isNaN(in_1) || isNaN(in_2)){
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 * in_2).toString;
+            }
+        }
+
+        function dele() {
+            let in_1 = parseFloat(document.getElementById("in_1").value);
+            let  in_2 = parseFloat(document.getElementById("in_2").value);
+            let output = document.getElementById("kalk-output");
+            if(isNaN(in_1) || isNaN(in_2)) {
+                alert("Feil tallformat, prøv igjen.");
+            } else {
+                output.innerHTML = (in_1 / in_2).toString();
+            }
+        }
+
+    </script>
+</head>
+<body>
+<h2>Oppgave 1</h2>
+Navn: <input id="navn" type="text" value=""/>
+Alder: <input id="alder" type="text" value=""/>
+<button onClick="printInfo()">Skriv ut navn og alder</button>
+<div id="output"></div>
+
+<h2>Oppgave 2</h2>
+Fahrenheit:<input onChange="fahrenheitToCelsius(this.value)" id="fahrenheit" type="text" value=""/>
+Celsius:<input onChange="celsiusToFahrenheit(this.value)" id="celsius" type="text" value=""/>
+
+<h2>Oppgave 3</h2>
+<input id="in_1" type="number" value=""/>
+<input id="in_2" type="number" value=""/>
+<button onClick="pluss();">+</button>
+<button onClick="minus();">-</button>
+<button onClick="gange();">*</button>
+<button onClick="dele();">/</button>
+<div id="kalk-output"> </div>
+
+</body>
+</html>

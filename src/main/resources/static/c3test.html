@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../../../c3-0.7.20/docs/js/d3-5.8.2.min.js"></script>
+    <link href="../../../../c3-0.7.20/c3.css" rel="stylesheet">
+    <script src="../../../../c3-0.7.20/c3.min.js"></script>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            Line
+            <div id="line"></div>
+        </div>
+        <div class="col">
+            Spline
+            <div id="spline"></div>
+        </div>
+        <div class="col">
+            Step
+            <div id="step"></div>
+        </div>
+        <div class="col">
+            Area
+            <div id="area"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Area-Spline
+            <div id="area-spline"></div>
+        </div>
+        <div class="col">
+            Area-Step
+            <div id="area-step"></div>
+        </div>
+        <div class="col">
+            Bar
+            <div id="bar"></div>
+        </div>
+        <div class="col">
+            Scatter
+            <div id="scatter"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Pie
+            <div id="pie"></div>
+        </div>
+        <div class="col">
+            Donut
+            <div id="donut"></div>
+        </div>
+        <div class="col">
+            Gauge
+            <div id="gauge"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function generateChart(bindto, columns, type) {
+        return c3.generate({
+            bindto: bindto,
+            data: {
+                columns: columns,
+                type: type
+            },
+            size: { height: 200 }
+        });
+    }
+    var line = generateChart('#line', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'line');
+    var spline = generateChart('#spline', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'spline');
+    var step = generateChart('#step', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'step');
+    var area = generateChart('#area', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'area');
+    var area_spline = generateChart('#area-spline', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'area-spline');
+    var area_step = generateChart('#area-step', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'area-step');
+    var bar = generateChart('#bar', [ ['data1', 50, 20, 10, 40, 15, 25] ], 'bar');
+    var scatter = generateChart('#scatter', [ ['data1', 50, 20, 10, 40, 15, 25]] , 'scatter');
+    var pie = generateChart('#pie', [ ['data1', 50], ['data2', 20], ['data3', 10] ], 'pie');
+    var donut = generateChart('#donut', [ ['data1', 50], ['data2', 20], ['data3', 10] ], 'donut');
+    var gauge = generateChart('#gauge', [ ['data1', 50] ], 'gauge');
+
+</script>
+</body>
+</html>

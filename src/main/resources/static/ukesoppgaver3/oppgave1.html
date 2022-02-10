@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+navn: <input type="text" id="inputNavn">
+
+alder: <input type="text" id="inputAlder">
+
+<button onclick="visInfo()">Ok</button>
+<div id="output"></div>
+</body>
+<script>
+    function visInfo(){
+        const navn = document.getElementById("inputNavn").value;
+        const alder = document.getElementById("inputAlder").value;
+
+        let alderTest = Number(alder);
+        if(isNaN(alderTest) || alderTest < 1) {
+            alert("Du må skrive inn et tall over 0");
+
+
+        }else{
+            document.getElementById("output").innerHTML = "Hei " + navn + "! Du er " +  alder + " år gammel!"
+        }
+    }
+</script>
+</html>

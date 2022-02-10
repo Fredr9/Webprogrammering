@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="visPersoner()">Vis personer</button>
+    <div id="vis"></div>
+    <h1>Sortert</h1>
+    <div id="sortertVis"></div>
+    <script type="application/javascript">
+        function visPersoner() {
+            let person1= {
+                navn: "Pål Karlsen",
+                telefon: "44554455",
+                adresse: "Norgesveien 32"
+            };
+
+            let person2= {
+                navn: "Jacob Hall",
+                telefon: "99554455",
+                adresse: "Sverigessveien 32"
+            };
+            let person3= {
+                navn: "Hanne Sanda",
+                telefon: "45342312",
+                adresse: "Nordkappssveien 32"
+            };
+            let person4= {
+                navn: "Kurt Cantona",
+                telefon: "32342312",
+                adresse: "Ollatraffo 32"
+            };
+
+            let personliste = [];
+            personliste.push(person1, person2, person3, person4);
+
+            //let sortert = personliste.sort(function (person1sortert, person2sortert){
+            //  if (person1sortert >)
+            //});
+
+            let ut = "<table><tr><th>Navn</th><th>Telefon</th><th>Adresse</th></tr>";
+
+            for (let person of personliste) {
+                ut += "<tr><td>" + person.navn + "</td>" + "<td>" + person.telefon + "</td>" + "<td>" + person.adresse + "</td></tr>"
+            }
+
+            ut += "</table>";
+
+            document.getElementById("vis").innerHTML = ut;
+        }
+    </script>
+
+</body>
+</html>
